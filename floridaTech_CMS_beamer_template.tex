@@ -1,0 +1,164 @@
+\documentclass[10pt]{beamer}
+\usetheme{metropolis}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{transparent}
+\usepackage{eso-pic}
+\graphicspath{	{images/}	}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{listings}
+\lstset{language=Python,
+    basicstyle=\ttfamily\bfseries,
+    commentstyle=\color{red}\itshape,
+  showstringspaces=false,
+  keywordstyle=\color{blue}\bfseries}
+\setbeamertemplate{bibliography item}[text]
+
+\DeclareMathOperator\erf{erf}
+
+%Defines Florida Tech red color
+\definecolor{FTRed}{RGB}{120,0,0}
+\setbeamercolor{progress bar}{fg=FTRed}
+\setbeamercolor{frametitle}{fg=white,bg=FTRed}
+
+%Hides section slides
+\metroset{sectionpage=none}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+ \hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=blue,
+     citecolor = black,      
+     urlcolor=FTRed,
+     }
+
+
+\title{Your Title}
+\subtitle{Your Subtitle}
+\date{Date}
+\author{Author Name}
+\institute{}
+\titlegraphic{
+	\begin{picture}(0,0)
+    \put(70,-175){\makebox(0,0)[rt]{\includegraphics[height=3cm]{FloridaTechNewLogo.png}}}
+  \end{picture}
+\begin{picture}(0,0)
+    \put(320,-160){\makebox(0,0)[rt]{\includegraphics[height=3cm]{CMSlines.png}}}
+  \end{picture}
+  \begin{picture}(0,0)
+    \put(320,10){\makebox(0,0)[rt]{\includegraphics[height=2.2cm]{cern_logo.png}}}
+  \end{picture}
+  
+ 
+ }
+%\hspace{9.5cm}\vspace{-0.5cm} 
+\setbeamertemplate{footline}[text line]{%
+  \parbox{\linewidth}{\vspace{-0.15cm}\hspace{4cm} Author Names  -- ``Footer Title'' -- Date \hfill\insertpagenumber}}
+
+
+\begin{document}
+
+
+\maketitle
+
+%Adds Florida Tech logo to each page after this command
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south west, yshift=-4pt] at (current page.south west) {\includegraphics[height=1.2cm]{FloridaTechNewLogo}};
+\end{tikzpicture}}
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=2pt,xshift=1.5pt] at (current page.north east) {\includegraphics[height=0.8cm]{CMS-Color-Var1.pdf}};
+\end{tikzpicture}}
+\addtobeamertemplate{frametitle}{}{%
+\begin{picture}(0,0)
+    \put(305,29.2){\makebox(0,0)[rt]{\includegraphics[height=0.8cm]{cern_logo_1}}}
+  \end{picture}}
+
+%\begin{frame}{Table of contents}
+%        \begin{columns}
+%            \begin{column}{.5\textwidth}
+%             \setbeamertemplate{section in toc}[sections numbered]
+  %              \tableofcontents[sections=1- 6]
+  %              
+     %       \end{column}
+        %    \begin{column}{.5\textwidth}
+           %  \setbeamertemplate{section in toc}[sections numbered]
+           %     \tableofcontents[sections=7-11]
+           % \end{column}
+       % \end{columns}
+   % \end{frame}
+
+
+%Default ToC
+%\begin{frame}{Table of contents}
+ %\setbeamertemplate{section in toc}[sections numbered]
+  %\tableofcontents[hideallsubsections]
+%\end{frame}
+
+%\begin{frame}[fragile]{ME0 Update}
+
+%\vspace{-0.4cm}
+%\begin{columns}
+%\begin{column}{0.4\textwidth}
+%\begin{itemize}\footnotesize{
+%\item Teed a line to the main N2 line in the cleanroom and routed to the storage rack
+%\item Removed the ME0 from the X-ray box and placed in storage}
+%\end{itemize}
+%\end{column}
+%\begin{column}{0.4\textwidth}
+%\center
+%\vspace{-0.4cm}
+%\includegraphics[width=5cm]{M5moduleXrayBox.jpg}\\
+%\end{column}
+%\end{columns}
+%\end{frame}
+
+
+\begin{frame}[fragile]{Frame with columns}
+\vspace{-0.5cm}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{itemize}\scriptsize{
+\itemsep0em
+\item Column 0}
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{itemize}\scriptsize{
+\itemsep0em
+\item Column 1}
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Frame with figure}
+
+\center
+\includegraphics[width=3cm]{CMS-Color-Var1.pdf}\\
+\scriptsize{The CMS logo.}\\
+
+
+\end{frame}
+
+\begin{frame}[fragile]{Frame with equation}
+
+$$i\gamma^{\mu}\partial_{\mu}\psi-\psi=0$$
+\end{frame}
+
+\end{document}
+
+
+
