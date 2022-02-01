@@ -7,7 +7,7 @@
 \usepackage{adjustbox}
 \usepackage{transparent}
 \usepackage{eso-pic}
-\graphicspath{	{images/}	}
+\graphicspath{	{images/}	} % Change to your graphics path
 \usepackage{amsmath}
 \usepackage{url}
 \usepackage{hyperref}
@@ -62,7 +62,8 @@
   
  
  }
-%\hspace{9.5cm}\vspace{-0.5cm} 
+
+% Add footer
 \setbeamertemplate{footline}[text line]{%
   \parbox{\linewidth}{\vspace{-0.15cm}\hspace{4cm} Author Names  -- ``Footer Title'' -- Date \hfill\insertpagenumber}}
 
@@ -85,7 +86,19 @@
 \begin{picture}(0,0)
     \put(305,29.2){\makebox(0,0)[rt]{\includegraphics[height=0.8cm]{cern_logo_1}}}
   \end{picture}}
+  
+% If you want a table of contents,
+% uncomment lines 93--97 for default
+% table of contents, or 101--112 for
+% the two-column table of contents
 
+%Default table of contents
+%\begin{frame}{Table of contents}
+ %\setbeamertemplate{section in toc}[sections numbered]
+  %\tableofcontents[hideallsubsections]
+%\end{frame}
+
+% Two column table of contents
 %\begin{frame}{Table of contents}
 %        \begin{columns}
 %            \begin{column}{.5\textwidth}
@@ -101,29 +114,6 @@
    % \end{frame}
 
 
-%Default ToC
-%\begin{frame}{Table of contents}
- %\setbeamertemplate{section in toc}[sections numbered]
-  %\tableofcontents[hideallsubsections]
-%\end{frame}
-
-%\begin{frame}[fragile]{ME0 Update}
-
-%\vspace{-0.4cm}
-%\begin{columns}
-%\begin{column}{0.4\textwidth}
-%\begin{itemize}\footnotesize{
-%\item Teed a line to the main N2 line in the cleanroom and routed to the storage rack
-%\item Removed the ME0 from the X-ray box and placed in storage}
-%\end{itemize}
-%\end{column}
-%\begin{column}{0.4\textwidth}
-%\center
-%\vspace{-0.4cm}
-%\includegraphics[width=5cm]{M5moduleXrayBox.jpg}\\
-%\end{column}
-%\end{columns}
-%\end{frame}
 
 
 \begin{frame}[fragile]{Frame with columns}
