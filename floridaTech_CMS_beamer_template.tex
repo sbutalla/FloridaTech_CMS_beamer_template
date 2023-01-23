@@ -1,3 +1,13 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% LaTeX beamer metropolis slides template for the High Energy Physics  %%%%%%%%%%
+%%%%%%%%% Group (CMS) at the Florida Institute of Technology. Uses the         %%%%%%%%%%
+%%%%%%%%% metropolis theme by Matthias Vogelgesang.			       %%%%%%%%%%
+%%%%%%%%% https://ctan.org/pkg/beamertheme-metropolis?lang=en                  %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Stephen D. Butalla %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 2021/02/01 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \documentclass[10pt]{beamer}
 \usetheme{metropolis}
 \usepackage{xcolor}
@@ -19,12 +29,12 @@
   keywordstyle=\color{blue}\bfseries}
 \setbeamertemplate{bibliography item}[text]
 
-\DeclareMathOperator\erf{erf}
+\DeclareMathOperator\erf{erf} % define the error function for math mode
 
-%Defines Florida Tech red color
-\definecolor{FTRed}{RGB}{120,0,0}
-\setbeamercolor{progress bar}{fg=FTRed}
-\setbeamercolor{frametitle}{fg=white,bg=FTRed}
+
+\definecolor{FTRed}{RGB}{120,0,0} % defines Florida Tech red (crimson)_ color
+\setbeamercolor{progress bar}{fg=FTRed} % color progress 
+\setbeamercolor{frametitle}{fg=white,bg=FTRed} % set top bar of slide to FTRed
 
 %Hides section slides
 \metroset{sectionpage=none}
